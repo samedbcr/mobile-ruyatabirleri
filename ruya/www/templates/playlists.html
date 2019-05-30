@@ -1,0 +1,37 @@
+<ion-view view-title="Rüyalar App">
+	<ion-content>
+
+		<!-- Bilgilendirme -->
+
+		<div class="card">
+
+			<div class="item item-dark item-text-wrap">
+				Rüyanda ne gördün merak ediyoruz.
+			</div>
+		</div>
+
+		<!-- Arama Kısmı -->
+
+		<div class="list list-inset">
+			<label class="item item-input">
+				<i class="icon ion-search placeholder-icon"></i>
+				<input type="text" placeholder="Rüyan nedir?" ng-change="ruyaCek(ruya)" ng-model="ruya">
+			</label>
+		</div>
+
+		<!-- Sonuc kısmı -->
+
+		<div class="card">
+
+			<div class="item item-wrap item-text-wrap" ng-repeat="ruyalar in gelenruyalar">
+				<h1>{{ruyalar.ruya}}</h1>
+				{{ruyalar.aciklama}}
+			</div>
+		</div>
+
+		
+
+
+
+	</ion-content>
+</ion-view>
